@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demande de devis - 3i Domotique</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+  form {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  transition: border-color 0.3s;
+  background-color: #010028;
+  color: var(--text);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.btn-primary {
+  background-color: var(--accent);
+  color: var(--main-bg);
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #00b8d6;
+}
+
+</style>
+<body>
+  <header class="navbar" role="banner">
+    <a href="index.html" class="logo">
+    <img src="images/Logo 3iDomotique.jpg" alt="Logo 3i" style="height: 40px;">
+   </a>
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="devis.html" aria-current="page" class="">Demander un devis</a>
+    </nav>
+  </header>
+
+  <main class="mainContent" role="main">
+    <section class="section" aria-labelledby="devis-title">
+      <h1 id="devis-title">Demander un devis</h1>
+      <p>Merci de remplir ce formulaire pour que nous puissions vous proposer une solution adaptée.</p>
+
+      <form novalidate>
+        <div class="form-group">
+          <label for="name">Nom / Entreprise <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Nom / Entreprise" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Objet de la demande</label>
+          <input type="text" id="subject" name="subject" placeholder="Objet de la demande" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Décrivez votre besoin</label>
+          <textarea id="message" name="message" rows="6" placeholder="Décrivez votre besoin..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Envoyer ma demande</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
